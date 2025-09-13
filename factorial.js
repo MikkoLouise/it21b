@@ -1,4 +1,5 @@
 //Console Input
+const { clear } = require("console");
 const readline=require("readline");
 
 const rl = readline.createInterface({
@@ -18,12 +19,12 @@ rl.question("Enter your choice (1-3): ", choice =>{
     
     if (choice === "1"){
         sayHello();
-        
+
     } else if (choice === "2"){
         computeFactorial();
 
     } else if (choice === "3"){
-        console.log("Exiting Application");
+        exitProgram();
     } else {
         console.log("Invalid Choice. Please Try Again");
     }
@@ -54,6 +55,12 @@ console.log("Factorial");
                 console.log("The factorial of " + num + " is " + fact);
             }
         })
+    }
+
+    function exitProgram(){
+        console.log("Exiting Application");
+        rl.close();
+        console.clear();
     }
 
 mainMenu();
