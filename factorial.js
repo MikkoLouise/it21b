@@ -6,6 +6,7 @@ const rl = readline.createInterface({
     output: process.stdout
 })
 
+function mainMenu(){
 console.log("---------------------------");
 console.log("Factorial Application");
 console.log("1. Say Hello");
@@ -44,3 +45,7 @@ rl.question("Enter your choice (1-3): ", choice =>{
     }
     
 })
+
+}
+
+mainMenu();
