@@ -18,8 +18,26 @@ rl.question("Enter your choice (1-3): ", choice =>{
     
     if (choice === "1"){
         sayHello();
+        
     } else if (choice === "2"){
-        console.log("Factorial");
+        computeFactorial();
+
+    } else if (choice === "3"){
+        console.log("Exiting Application");
+    } else {
+        console.log("Invalid Choice. Please Try Again");
+    }
+    
+})
+
+}
+
+function sayHello(){
+    console.log("Hello");   
+}
+
+function computeFactorial(){
+console.log("Factorial");
 
          rl.question("Please enter a number for factorial: ", numStr =>{
             let num = parseInt(numStr);
@@ -36,19 +54,6 @@ rl.question("Enter your choice (1-3): ", choice =>{
                 console.log("The factorial of " + num + " is " + fact);
             }
         })
-
-    } else if (choice === "3"){
-        console.log("Exiting Application");
-    } else {
-        console.log("Invalid Choice. Please Try Again");
     }
-    
-})
-
-}
-
-function sayHello(){
-    console.log("Hello");   
-}
 
 mainMenu();
