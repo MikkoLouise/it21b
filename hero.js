@@ -29,8 +29,27 @@ class Warrior extends Hero {
     }
 }
 
+class Mage extends Hero {
+    constructor(name,health,attack,mana){
+        super(name,health,attack);
+        this.mana = mana;
+    }
+
+useAbility(){
+    console.log(`${this.name} casts fireball`);
+}
+
+showStats(){
+    super.showStats();
+     console.log("Mana: "+this.mana);
+}
+
+}
+
 const Naruto = new Warrior("Naruto", 100 , 10);
-const hero2 = new Hero("Sasuke", 100 , 8);
+const Sasuke = new Mage("Sasuke", 100 , 8 , 50);
 
-
-Naruto.useAbility();
+//Naruto.showStats();
+//Naruto.useAbility();
+Sasuke.showStats();
+Sasuke.useAbility();
